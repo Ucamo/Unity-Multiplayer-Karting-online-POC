@@ -101,7 +101,11 @@ namespace Photon.Pun.Demo.PunBasics
 				targetPosition.y += characterControllerHeight;
 				if(Camera.main!=null){
 					this.transform.position = Camera.main.WorldToScreenPoint (targetPosition) + screenOffset;
+				}else{
+					Debug.LogError("Camera main is null");
 				}				
+			}else{
+				Debug.LogError("targetTransform is null");
 			}
 		}
 

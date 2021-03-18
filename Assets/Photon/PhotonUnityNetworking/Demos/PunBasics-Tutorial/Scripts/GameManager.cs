@@ -71,7 +71,6 @@ namespace Photon.Pun.Demo.PunBasics
 
 					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
 					instacePlayerPrefab= PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(16f,5f,3f), Quaternion.identity, 0);
-					Debug.Log("instacePlayerPrefab name "+instacePlayerPrefab.name);
 				}else{
 
 					Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);

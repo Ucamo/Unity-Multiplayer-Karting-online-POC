@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 /// <summary>
 /// This class inherits from TargetObject and represents a LapObject.
 /// </summary>

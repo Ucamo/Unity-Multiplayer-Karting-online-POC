@@ -12,7 +12,7 @@ public class ObjectiveCompleteLaps : Objective
     [Tooltip("Start sending notification about remaining laps when this amount of laps is left")]
     public int notificationLapsRemainingThreshold = 1;
 
-
+    
     
     public int currentLap { get; private set; }
 

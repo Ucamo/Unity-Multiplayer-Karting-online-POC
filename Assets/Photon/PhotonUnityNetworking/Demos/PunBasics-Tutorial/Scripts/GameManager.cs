@@ -68,9 +68,24 @@ namespace Photon.Pun.Demo.PunBasics
 				if (PlayerManager.LocalPlayerInstance==null)
 				{
 				    Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
+					//Set up player position, so they don't collide while entering the room.
+					Vector3 spawnPosition = new Vector3(16f,5f,3f);
+					int playerNumber= PhotonNetwork.LocalPlayer.ActorNumber;
+					Debug.Log("playerNumber "+playerNumber);
+					switch(playerNumber){
+						case 1: spawnPosition = new Vector3(14.43f,5f,3f);break;
+						case 2: spawnPosition = new Vector3(17.60f,5f,3f);break;
+						case 3: spawnPosition = new Vector3(12.81f,5f,3f);break;
+						case 4: spawnPosition = new Vector3(19.35f,5f,3f);break;
+						case 5: spawnPosition = new Vector3(14.43f,5f,0f);break;
+						case 6: spawnPosition = new Vector3(17.60f,5f,0f);break;
+						case 7: spawnPosition = new Vector3(12.81f,5f,0f);break;
+						case 8: spawnPosition = new Vector3(19.35f,5f,0f);break;
+					}
 
 					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-					instacePlayerPrefab= PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(16f,5f,3f), Quaternion.identity, 0);
+					instacePlayerPrefab= PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPosition, Quaternion.identity, 0);					
+
 				}else{
 
 					Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);

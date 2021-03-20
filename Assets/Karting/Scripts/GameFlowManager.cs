@@ -47,6 +47,7 @@ public class GameFlowManager : MonoBehaviour
     float m_TimeLoadEndGameScene;
     string m_SceneToLoad;
     float elapsedTimeBeforeEndScene = 0;
+    bool isEndGame=false;
 
     void Start()
     {
@@ -149,6 +150,7 @@ public class GameFlowManager : MonoBehaviour
 
     void EndGame(bool win)
     {
+        isEndGame=true;
         // unlocks the cursor before leaving the scene, to be able to click buttons
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -182,6 +184,10 @@ public class GameFlowManager : MonoBehaviour
             // create a game message
             loseDisplayMessage.delayBeforeShowing = delayBeforeWinMessage;
             loseDisplayMessage.gameObject.SetActive(true);
-        }
+        }        
+    }
+
+    public bool GetEndGame(){
+        return isEndGame;
     }
 }

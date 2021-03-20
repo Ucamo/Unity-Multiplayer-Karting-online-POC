@@ -71,7 +71,6 @@ namespace Photon.Pun.Demo.PunBasics
 					//Set up player position, so they don't collide while entering the room.
 					Vector3 spawnPosition = new Vector3(16f,5f,3f);
 					int playerNumber= PhotonNetwork.LocalPlayer.ActorNumber;
-					Debug.Log("playerNumber "+playerNumber);
 					switch(playerNumber){
 						case 1: spawnPosition = new Vector3(14.43f,5f,3f);break;
 						case 2: spawnPosition = new Vector3(17.60f,5f,3f);break;

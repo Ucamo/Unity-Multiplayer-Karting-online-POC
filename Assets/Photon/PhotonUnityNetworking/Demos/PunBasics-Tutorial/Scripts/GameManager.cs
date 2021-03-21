@@ -10,8 +10,8 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 using Photon.Realtime;
+
 namespace Photon.Pun.Demo.PunBasics
 {
 	#pragma warning disable 649
@@ -83,7 +83,7 @@ namespace Photon.Pun.Demo.PunBasics
 					}
 
 					// we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-					instacePlayerPrefab= PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPosition, Quaternion.identity, 0);					
+					instacePlayerPrefab= PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPosition, Quaternion.identity, 0);				
 
 				}else{
 

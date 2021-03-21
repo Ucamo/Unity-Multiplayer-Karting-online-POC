@@ -8,10 +8,10 @@ namespace KartGame.KartSystems {
         public string Vertical = "Vertical";
 
         public override Vector2 GenerateInput() {
-            return new Vector2 {
+                return new Vector2 {
                 x = Input.GetAxis(Horizontal),
                 y = Input.GetAxis(Vertical)
-            };
+            };             
         }
     }
 }

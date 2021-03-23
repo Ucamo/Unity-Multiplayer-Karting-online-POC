@@ -4175,6 +4175,7 @@ GameObject:
   - component: {fileID: -6120861691415664910}
   - component: {fileID: 7803393552928153356}
   - component: {fileID: 5923339033495779245}
+  - component: {fileID: 7248119616588328185}
   m_Layer: 2
   m_Name: KartClassic_Player_PUN
   m_TagString: Player
@@ -4459,3 +4460,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionDampTime: 0.25
+--- !u!114 &7248119616588328185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8966467527850851934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87434f694b4ec7642a099c3645e43fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valY: 0
+  valX: 0

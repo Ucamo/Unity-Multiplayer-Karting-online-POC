@@ -9,6 +9,7 @@ public class TouchControls : MonoBehaviour
     public GameObject TouchControlHolder;
     bool ShowControls;
     GameObject myPlayer; 
+    public VariableJoystick variableJoystick;
 
     bool isForward=false;
     bool isBackward=false;
@@ -44,18 +45,11 @@ public class TouchControls : MonoBehaviour
     }
 
     void HandleMovement(){
-        if(isForward){
-            myPlayer.GetComponent<TouchInput>().valY=1;
+        if(myPlayer!=null && myPlayer.GetComponent<TouchInput>()!=null && variableJoystick!=null){
+        myPlayer.GetComponent<TouchInput>().valY=variableJoystick.Vertical;
+        myPlayer.GetComponent<TouchInput>().valX=variableJoystick.Horizontal;
         }
-        if(isBackward){
-            myPlayer.GetComponent<TouchInput>().valY=-1;
-        }
-        if(isLeft){
-            myPlayer.GetComponent<TouchInput>().valX=-1;
-        }
-        if(isRight){
-            myPlayer.GetComponent<TouchInput>().valX=1;
-        }
+
     }
     
 

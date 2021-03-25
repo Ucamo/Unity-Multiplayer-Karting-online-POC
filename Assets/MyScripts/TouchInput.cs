@@ -9,9 +9,7 @@ public class TouchInput : BaseInput
             Vector2 vector = new Vector2 {
                 x = valX,
                 y = valY
-            };
-            valX=0;
-            valY=0;            
+            };       
             return vector;             
     }
 }
